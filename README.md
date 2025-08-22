@@ -16,17 +16,17 @@ and an odd-character variant $Z(o)$.
 
 - Computes **$Z(n)$** and optional **$Z(o)$** placeholders.
 - Applies **five polarity amplifiers** (transforms):
-  1. Möbius twist  $\,\mathcal{M}[G](n) = \sum_{d\mid n}\mu(d)\,G(n/d)$
-  2. Fractional-part proximity  $\,s(n)=\min(\{G(n)\},1-\{G(n)\})$
-  3. Forward difference  $\,\Delta G(n)=G(n+1)-G(n)$
-  4. Log-Mellin slope  $\,\Delta_{\log}G(n)=n\big(G(n+1)-G(n)\big)$
+  1. Möbius twist  $$\,\mathcal{M}[G](n) = \sum_{d\mid n}\mu(d)\,G(n/d)$$
+  2. Fractional-part proximity  $$\,s(n)=\min(\{G(n)\},1-\{G(n)\})$$
+  3. Forward difference  $$\,\Delta G(n)=G(n+1)-G(n)$$
+  4. Log-Mellin slope  $$\,\Delta_{\log}G(n)=n\big(G(n+1)-G(n)\big)$$
   5. Dirichlet-character projection (few small moduli by default)
 - Labels **primes vs. composites** with a sieve.
 - Scores each feature by **AUC** and converts it to **Polarity Index**  
-  **PI** $= 2\cdot\text{AUC}-1 \in [-1,1]$.
+  **PI** $$= 2\cdot\text{AUC}-1 \in [-1,1]$$.
 - Reports per-window stability.
 
-**Expectation:** raw $Z(n)$ is typically **neutral** (PI≈0). If any true signal exists, some transforms should push PI into **0.2–0.6** territory.
+**Expectation:** raw $$Z(n)$$ is typically **neutral** (PI≈0). If any true signal exists, some transforms should push PI into **0.2–0.6** territory.
 
 ---
 
