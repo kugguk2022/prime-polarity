@@ -91,3 +91,12 @@ prime-polarity score --start 100000 --end 120000 --windows 3 --window-size 5000
 ---
 
 
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md). Be kind: [CODE OF CONDUCT](CODE_OF_CONDUCT.md).
+
+---
+
+## License
+
+MIT
