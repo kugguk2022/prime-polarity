@@ -58,7 +58,6 @@ Install the package with development dependencies:
 A raw generator like `Z(n)` is typically **neutral** (PI ≈ 0). If any true prime signal exists, some of these transforms should amplify it, pushing the PI into the **0.2–0.6** territory.
 </summary>
 ---
-<details>
 ## Quickstart
 
 Compute polarity for default transforms on `n` in the range `[100000, 120000]`, analyzed over three sliding windows:
@@ -89,26 +88,29 @@ prime-polarity score --start 100000 --end 120000 --windows 3 --window-size 5000
   With Schanuel's conjecture or related axioms, the `exp` of linearly independent complex numbers is algebraically independent. The task is to seek linear independence for `ζ(1 + iθ_n)` vs. `ζ(1 + iθ_m)`.
 
 ---
-</details>
+
 ### Polarity Scale (−2 … +2)
 
-> **Note:** The measurable **Polarity Index (PI)** in this repo is always in **[−1, 1]** with  
-> \( \mathrm{PI} = 2\cdot\mathrm{AUC} - 1 \). The **polarity levels −2…+2** below are **conceptual bins**.
+> 💡 **Note:** The measurable **Polarity Index (PI)** in this repo is always in **[−1, 1]** with \( \mathrm{PI} = 2\cdot\mathrm{AUC} - 1 \). The **polarity levels −2…+2** below are **conceptual bins**.
 
-| Polarity | Rating (conceptual) | AUC (reference) | PI (reference) | Description | Example generators / methods | What to do |
-|---:|---|---:|---:|---|---|---|
-| **+2** | **Perfect direct signal** | **1.00** | **+1.00** | Output separates primes from composites **perfectly**. | Deterministic primality (AKS, ECPP-as-decider), ground-truth labels. | Nothing—this is the ideal ceiling. |
-| **+1** | **Strong direct signal** | ~0.75–0.95 | ~+0.50–+0.90 | Output is **highly** informative for primality. | High-confidence probabilistic tests (Miller–Rabin, Baillie–PSW); extremely effective analytic transforms with proven stability. | Use as primary feature; verify **window stability** and add null baselines (`--shuffle`). |
-| **0** | **Neutral signal** | ~0.50 | ~0.00 | Output is **independent** of primality (no ranking power). | Smooth analytic forms without accentuation (e.g., raw \( Z(n) \) as in this repo); random noise. | Apply **amplifiers/transforms** (Möbius twist, fractional-part, differences, Dirichlet projections). |
-| **−1** | **Reverse signal** | ~0.05–0.25 | ~−0.90–−0.50 | Output is strongly tied to **compositeness** or ranks primes **worst**. | Compositeness witnesses/factor-finding scores (e.g., “found non-trivial divisor” signals); mis-signed but informative transforms. | **Negate or invert** the feature; it can become a high-value positive signal. |
-| **−2** | **Perfect reverse signal** | **0.00** | **−1.00** | Output separates **composites** from primes perfectly (but **inverted**). | An oracle that always exposes a factor for composites and gives no signal for primes. | Flip sign (or swap labels) to obtain **+2** behavior. |
+| Polarity | Rating | AUC | PI | Description | Example generators / methods | What to do |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **+2** 🚀 | **Perfect direct signal** | **1.00** | **+1.00** | Output separates primes from composites **perfectly**. | Deterministic primality (AKS, ECPP), ground-truth labels. | Nothing—this is the ideal ceiling. |
+| **+1** ✅ | **Strong direct signal** | ~0.75–0.95 | ~+0.50–+0.90 | Output is **highly** informative for primality. | High-confidence probabilistic tests (Miller–Rabin, Baillie–PSW). | Use as primary feature; verify **window stability** and add null baselines. |
+| **0** ⚖️ | **Neutral signal** | ~0.50 | ~0.00 | Output is **independent** of primality (no ranking power). | Smooth analytic forms (e.g., raw \( Z(n) \)); random noise. | Apply **amplifiers/transforms** (Möbius twist, fractional-part, etc.). |
+| **−1** ⚠️ | **Reverse signal** | ~0.05–0.25 | ~−0.90–−0.50 | Output is strongly tied to **compositeness** or ranks primes **worst**. | Compositeness witnesses/factor-finding scores; mis-signed but informative transforms. | **Negate or invert** the feature; it can become a high-value positive signal. |
+| **−2** ↩️ | **Perfect reverse signal** | **0.00** | **−1.00** | Output separates **composites** from primes perfectly (but **inverted**). | An oracle that always exposes a factor for composites. | Flip sign (or swap labels) to obtain **+2** behavior. |
 
-#### Quick mapping reminder
-- \( \mathrm{AUC} = 0.5 \Rightarrow \mathrm{PI} = 0 \) (neutral)  
-- \( \mathrm{AUC} = 1.0 \Rightarrow \mathrm{PI} = +1 \) (perfect direct)  
+<br/>
+<details>
+<summary><b>Quick mapping reminder</b></summary>
+<br/>
+
+- \( \mathrm{AUC} = 0.5 \Rightarrow \mathrm{PI} = 0 \) (neutral)
+- \( \mathrm{AUC} = 1.0 \Rightarrow \mathrm{PI} = +1 \) (perfect direct)
 - \( \mathrm{AUC} = 0.0 \Rightarrow \mathrm{PI} = -1 \) (perfect reverse)
 
-
+</details>
 ## Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md). Be kind: [CODE OF CONDUCT](CODE_OF_CONDUCT.md).
