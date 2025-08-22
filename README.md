@@ -8,7 +8,7 @@ $$
 
 and an odd-character variant $Z(o)$.
 
-**Goal:** turn informal intuition (“does this generator *see* primes?”) into a **measurable, reproducible Polarity Index (PI)** based on ROC AUC.
+**Goal:** turn informal intuition (“does this generator *see* primes?(does it generate irrationals and/or transcendentals instead”) into a **measurable, reproducible Polarity Index (PI)** based on ROC AUC.
 
 ---
 
