@@ -48,24 +48,24 @@ pip install .[dev]
 
   1. **Möbius twist**
      
-     $$
+     $\displaystyle
      M[G](n) = \sum_{d|n} \mu(d) \cdot G\left(\frac{n}{d}\right)
-     $$
+     $
   2. **Fractional-part proximity**
      
-     $$
+     $\displaystyle
      s(n) = \min\left(\{G(n)\}, 1 - \{G(n)\}\right)
-     $$
+     $
   3. **Forward difference**
      
-     $$
+     $\displaystyle
      \Delta G(n) = G(n+1) - G(n)
-     $$
+     $
   4. **Log-Mellin slope**
      
-     $$
+     $\displaystyle
      \Delta_{\log}G(n) = n \left(G(n+1) - G(n)\right)
-     $$
+     $
   5. **Dirichlet-character projection**  
      (few small moduli by default)
      
@@ -105,8 +105,8 @@ This project is **empirical**; it doesn’t claim proofs. Still, here is a conci
 
 ### 1) Irrationality & Transcendence Heuristics
 
-- If a generator has the form $G(n)=\exp(F(n))$ where $F(n)$ takes algebraically independent values at infinitely many $n$, **Lindemann–Weierstrass**-type phenomena suggest “many” outputs are transcendental.
-- For $Z(n)=\exp(\pi\,\zeta(n-1)/n)+1$: as $n\to\infty$, $\zeta(n-1)\to 1$, so $Z(n)\to 2$. Near-constancy makes prime-signal weak, but does not by itself decide irrationality/transcendence of individual values.
+- If a generator has the form $\displaystyle G(n)=\exp(F(n))$ where $\displaystyle F(n)$ takes algebraically independent values at infinitely many $n$, **Lindemann–Weierstrass**-type phenomena suggest “many” outputs are transcendental.
+- For $\displaystyle Z(n)=\exp(\pi\,\zeta(n-1)/n)+1$: as $\displaystyle n\to\infty$, $\displaystyle \zeta(n-1)\to 1$, so $Z(n)\to 2$. Near-constancy makes prime-signal weak, but does not by itself decide irrationality/transcendence of individual values.
 
 ### 2) A “Generator Family” to Study
 
@@ -118,7 +118,7 @@ $
 
 </div>
 
-with slowly-varying $b(n)$ (e.g., $1+\tfrac{i\,c}{\log n}$) and arithmetic couplings (Dirichlet $L$-values, characters). Empirically test polarity and irrationality/transcendence.
+with slowly-varying $\displaystyle b(n)$ (e.g., $\displaystyle 1+\tfrac{i\,c}{\log n}$) and arithmetic couplings (Dirichlet $\displaystyle L$-values, characters). Empirically test polarity and irrationality/transcendence.
 
 - When can one show **infinitely many values are irrational**?
 - Under extra hypotheses (e.g., **Schanuel’s conjecture**), which subfamilies would be **transcendental** infinitely often?
@@ -126,9 +126,9 @@ with slowly-varying $b(n)$ (e.g., $1+\tfrac{i\,c}{\log n}$) and arithmetic coupl
 ### 3) Minimal “Proof Sketch” Targets Collaborators Could Tackle
 
 - **Irrationality on a density-1 subsequence:**  
-  Show that if $b(n)\to 1$ with controlled imaginary part and $a\notin \pi\mathbb{Q}$, then $\{\Re \zeta(b(n))\}$ avoids rationals on a set of density 1.
+  Show that if $b(n)\to 1$ with controlled imaginary part and $ \displaystyle a\notin \pi\mathbb{Q}$, then $\{\Re \zeta(b(n))\}$ avoids rationals on a set of density 1.
 - **Transcendence under conditional axioms:**  
-  With Schanuel or related, $\exp$ of linearly independent complex numbers is algebraically independent. Seek linear independence for $\zeta(1+i\theta_n)$ vs. $\zeta(1+i\theta_m)$.
+  With Schanuel or related, $\exp$ of linearly independent complex numbers is algebraically independent. Seek linear independence for $\displaystyle \zeta(1+i\theta_n)$ vs. $\zeta(1+i\theta_m)$.
 
 ---
 
