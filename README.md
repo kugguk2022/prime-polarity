@@ -48,21 +48,21 @@ pip install .[dev]
 
   1. **Möbius twist**
      
-     $mdash;$M[G](n) = \sum_{d|n} \mu(d) \cdot G\left(\frac{n}{d}\right)
+     &mdash;$M[G](n) = \sum_{d|n} \mu(d) \cdot G\left(\frac{n}{d}\right)
      $$
   2. **Fractional-part proximity**
      
-     $mdash;
+     &mdash;
      s(n) = \min\left(\{G(n)\}, 1 - \{G(n)\}\right)
      $
   3. **Forward difference**
      
-     $mdash;
+     &mdash;
      \Delta G(n) = G(n+1) - G(n)
      $
   4. **Log-Mellin slope**
      
-     $mdash;
+     &mdash;
      \Delta_{\log}G(n) = n \left(G(n+1) - G(n)\right)
      $
   5. **Dirichlet-character projection**  
