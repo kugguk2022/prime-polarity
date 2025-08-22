@@ -1,4 +1,4 @@
-# prime-polarity
+# Prime-polarity
 Polarity Cheatsheet (prime signal vs. composite signal)
 
 # Prime Polarity (Z(p)/Z(o))
