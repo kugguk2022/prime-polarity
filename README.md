@@ -42,7 +42,7 @@ pip install .[dev]
 ---
 
 ## What it does
-
+<div>
 - Computes **$Z(n)$** and optional **$Z(o)$**.
 - Applies **five polarity amplifiers (transforms):**
 
@@ -77,7 +77,7 @@ pip install .[dev]
 Raw $Z(n)$ is typically **neutral** ($\text{PI} \approx 0$). If any true signal exists, some transforms should push PI into the **0.2–0.6** territory.
 
 ---
-
+</div>
 ## Quickstart
 
 Compute polarity for default transforms on $n \in [100000, 120000]$ in three sliding windows:
