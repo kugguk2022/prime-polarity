@@ -4,6 +4,16 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 A framework for empirically scoring the **prime-signal polarity** of number-theoretic generators, with formal polarity measurement and amplification transforms.
+**Prime Polarity** is not a primality test. It is a scoring harness:
+- You define numeric generators \(G(n)\) (e.g., \(Z(n)\), variants, transforms).
+- The tool labels \(n\) as prime/composite.
+- It computes **AUC** and the **Polarity Index** \( \mathrm{PI} = 2\cdot \mathrm{AUC} - 1 \in [-1,1] \).
+
+Interpretation:
+- **PI ≈ 0**: neutral (no ranking power; expected for raw \(Z(n)\) and the current \(Z(o)\)).
+- **PI > 0**: ranks primes higher on average (weak “direct” signal).
+- **PI < 0**: ranks composites higher (reverse signal; often salvageable by sign flip).
+
 
 ## 🎯 Goal
 
@@ -12,7 +22,7 @@ Formalize the intuition ("does this generator *see* primes?") into a measurable,
 <p align="center">
   <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BPI%7D%20%3D%202%5Ccdot%5Ctext%7BAUC%7D%20-%201%20%5Cin%20%5B-1%2C1%5D" alt="PI = 2*AUC - 1" />
 </p>
-
+The present \(Z(o)\) (odd-character twist) is **expected to be neutral**: the base \(Z(n)\) is near-constant and the twist is sign-balanced across residue classes. Any prime sensitivity must come from **transforms** (Möbius twist, fractional-part proximity, differences, character projections). We report PI with tie-aware AUC and recommend residue/block-preserving nulls when claiming signal.
 ## 📦 Installation
 
 ```bash
@@ -47,6 +57,7 @@ Applies five polarity amplifiers:
 
 Labels primes vs. composites using a sieve and computes AUC-derived Polarity Index for each feature.
 
+
 ## 🚀 Quickstart
 
 ```bash
@@ -79,6 +90,12 @@ prime-polarity score --start 100000 --end 120000 --windows 3 --window-size 5000
 - Irrationality on density-1 subsequences
 - Transcendence under Schanuel's conjecture
 - Linear independence of ζ(1 + iθₙ) values
+
+**Known limitations** section:
+- **Tie handling**: average ranks (Wilcoxon). Plateaus can deflate AUC; prefer higher precision or continuous transforms.
+- **Leakage**: parity and small-modulus artifacts can inflate PI. Provide odd-only and coprime masks.
+- **Multiple testing**: compare against null baselines; do not chase single-window spikes.
+- **Reproducibility**: fix RNG seeds; export JSON/CSV results for review.
 
 ## 🤝 Contributing
 
