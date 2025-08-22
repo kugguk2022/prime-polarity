@@ -1,0 +1,13 @@
+name: Feature request
+description: Suggest an idea
+title: "[FEAT] "
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: What problem are you trying to solve?
+  - type: textarea
+    attributes:
+      label: Proposal
+      description: Your proposed solution
