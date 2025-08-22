@@ -23,10 +23,13 @@ Formalize the intuition ("does this generator *see* primes?") into a measurable,
   <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BPI%7D%20%3D%202%5Ccdot%5Ctext%7BAUC%7D%20-%201%20%5Cin%20%5B-1%2C1%5D" alt="PI = 2*AUC - 1" />
 </p>
 The present \(Z(o)\) (odd-character twist) is **expected to be neutral**: the base \(Z(n)\) is near-constant and the twist is sign-balanced across residue classes. Any prime sensitivity must come from **transforms** (Möbius twist, fractional-part proximity, differences, character projections). We report PI with tie-aware AUC and recommend residue/block-preserving nulls when claiming signal.
-## 📦 Installation
+## 📦 Installation and run 
 
 ```bash
 pip install prime-polarity
+```
+```bash
+prime-polarity --start 100000 --end 120000 --windows 3 --window-size 5000
 ```
 
 ## 🔬 What It Does
