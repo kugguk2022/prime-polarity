@@ -1,4 +1,4 @@
-# Prime Polarity (Z(p)/Z(o))
+# Prime Polarity Z(p)\frac{Z(o)}
 
 A tiny, empirical framework to **score the prime-signal polarity** of number-theoretic generators such as our
 
