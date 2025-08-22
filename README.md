@@ -48,9 +48,8 @@ pip install .[dev]
 
   1. **Möbius twist**
      
-     $mdash;
-     M[G](n) = \sum_{d|n} \mu(d) \cdot G\left(\frac{n}{d}\right)
-     $
+     $mdash;$M[G](n) = \sum_{d|n} \mu(d) \cdot G\left(\frac{n}{d}\right)
+     $$
   2. **Fractional-part proximity**
      
      $mdash;
