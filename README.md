@@ -1,6 +1,6 @@
 # Prime Polarity (Z(p)/Z(o))
 
-A tiny, empirical framework to **score the prime-signal polarity** of number-theoretic generators such as your
+A tiny, empirical framework to **score the prime-signal polarity** of number-theoretic generators such as our
 
 $$
 Z(n) = \exp\!\left(\frac{\pi\,\zeta(n-1)}{n}\right) + 1
