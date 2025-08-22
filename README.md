@@ -16,7 +16,7 @@ and an odd-character variant $Z(o)$.
 
 - Computes **$Z(n)$** and optional **$Z(o)$** placeholders.
 - Applies **five polarity amplifiers** (transforms):
-  1. Möbius twist  $$\,\mathcal{M}[G](n) = \sum_{d\mid n}\mu(d)\,G(n/d)$$
+  1. Möbius twist  $$M[G](n) = ∑_{d|n} μ(d) · G(n/d)$$
   2. Fractional-part proximity  $$\,s(n)=\min(\{G(n)\},1-\{G(n)\})$$
   3. Forward difference  $$\,\Delta G(n)=G(n+1)-G(n)$$
   4. Log-Mellin slope  $$\,\Delta_{\log}G(n)=n\big(G(n+1)-G(n)\big)$$
