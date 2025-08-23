@@ -7,7 +7,7 @@ A framework for empirically scoring the **prime-signal polarity** of number-theo
 **Prime Polarity** is not a primality test. It is a scoring harness:
 - You define numeric generators \(G(n)\) (e.g., \(Z(n)\), variants, transforms).
 - The tool labels \(n\) as prime/composite.
-- It computes **AUC** and the **Polarity Index** \( \mathrm{PI} = 2\cdot \mathrm{AUC} - 1 \in [-1,1] \).
+- It computes **AUC** and the **Polarity Index** $$\( \mathrm{PI} = 2\cdot \mathrm{AUC} - 1 \in [-1,1] \).$$
 
 Interpretation:
 - **PI ≈ 0**: neutral (no ranking power; expected for raw \(Z(n)\) and the current \(Z(o)\)).
